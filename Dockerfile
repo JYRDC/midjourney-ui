@@ -1,13 +1,11 @@
 # ---- Production ----
 FROM node:18-alpine AS production
 WORKDIR /dist
-WORKDIR .next
-WORKDIR public
 
-COPY .next ./.next
-COPY public ./public
-COPY package*.json ./
-COPY next.config.js ./next.config.js
+# COPY .next ./.next
+# COPY public ./public
+# COPY package*.json ./
+# COPY next.config.js ./next.config.js
 # use npm ci for production
 RUN npm install --omit=dev
 # Expose the port the app will run on
