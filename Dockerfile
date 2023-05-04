@@ -6,6 +6,12 @@ WORKDIR /dist
 # COPY public ./public
 # COPY package*.json ./
 # COPY next.config.js ./next.config.js
+
+COPY .next /dist
+COPY public /dist
+COPY package*.json /dist
+COPY next.config.js /dist
+
 # use npm ci for production
 RUN npm install --omit=dev
 # Expose the port the app will run on
