@@ -7,9 +7,11 @@ WORKDIR /dist
 # COPY package*.json ./
 # COPY next.config.js ./next.config.js
 
-COPY public ./
+RUN mkdir /.next
+
+COPY public ./public
 COPY package*.json ./
-COPY next.config.js ./
+COPY next.config.js ./next.config.js
 
 # use npm ci for production
 RUN npm install --omit=dev
