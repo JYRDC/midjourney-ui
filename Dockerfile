@@ -1,6 +1,8 @@
 # ---- Production ----
 FROM node:18-alpine AS production
 WORKDIR /dist
+WORKDIR .next
+WORKDIR public
 
 COPY .next ./.next
 COPY public ./public
