@@ -7,8 +7,8 @@ WORKDIR /dist
 # COPY package*.json ./
 # COPY next.config.js ./next.config.js
 
-COPY .next /dist
-COPY public /dist
+COPY .next /dist/.next
+COPY public /dist/public
 COPY package*.json /dist
 COPY next.config.js /dist
 
