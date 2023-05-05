@@ -1,5 +1,8 @@
 # ---- Production ----
 FROM node:18-alpine AS production
+
+RUN npm install yarn -g
+
 WORKDIR /dist
 
 # COPY .next ./.next
